@@ -1,11 +1,8 @@
-const { text } = require('body-parser');
-const { response } = require('express');
+const  express  = require('express');
+const app = express()
 
 
-app
-.route("/home")
-.get((request,response,nexthandler)) => {
-    response.type (""text/html")
-    response.write("<DOCTTYPE html")
-    nexthandler()
-})
+app.get('/',(request,response,nexthandler) => {
+    response.status(200).send('Hello') })
+
+app.listen(3000, () => console.log('web server running on port 3000'))
