@@ -1,4 +1,4 @@
-const { clear } = require("console");
+//const { clear } = require("console");
 
 /*const name1 = 'mario';
 
@@ -39,7 +39,10 @@ const int = setInterval(() => {
     console.log('in the inerval')
 },1000)
 
-*/
+
 
 console.log(__dirname);
 console.log(__filename);
+*/
+
+
