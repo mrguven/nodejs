@@ -45,5 +45,33 @@ console.log(__dirname);
 console.log(__filename);
 */
 
+//get; 
+
+//map 
+var liste = ["2","3 ","4","7","5"];
+liste = liste.map(e => e **2);
+console.log(liste);
+
+//filter
+//I can use and manipulate object via `object.entries(bla bla bla)`
+var nesne ={
+    "1": 15,
+    "2": 10,
+    "3": 5,
+    "4": 4,
+    "5": 3,
+}
+
+var age = Object.entries(nesne);
+
+age = Object.entries(nesne).filter(e => e[1] > 4)
+console.log(age);
 
 
+
+//sort 
+
+var list = [3,1,8,4,2,7];
+list = list.sort((a,b) => b-a );
+
+console.log(list);
