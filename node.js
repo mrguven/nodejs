@@ -75,3 +75,35 @@ var list = [3,1,8,4,2,7];
 list = list.sort((a,b) => b-a );
 
 console.log(list);
+
+// for in
+
+var obj = {
+    "a" : 1,
+    "b" : 2,
+    "c" : 3,
+    "d" : 4
+}
+
+  for (var key in obj){
+    console.log(key , obj[key])
+  }
+
+  //math
+
+  var result = Math.round(Math.random() * 100)
+
+  console.log(result)
+
+
+  //Math.sqrt = square root `kare kokunu veriyor`
+
+
+  //module
+
+  //core module
+
+
+  //third party module
+
+  //local module
