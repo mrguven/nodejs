@@ -43,7 +43,7 @@ const int = setInterval(() => {
 
 console.log(__dirname);
 console.log(__filename);
-*/
+
 
 //get; 
 
@@ -94,7 +94,7 @@ var obj = {
   var result = Math.round(Math.random() * 100)
 
   console.log(result)
-
+*/
 
   //Math.sqrt = square root `kare kokunu veriyor`
 
@@ -107,3 +107,19 @@ var obj = {
   //third party module
 
   //local module
+
+
+
+  //ES - CommonJs
+
+ var http = require ('http');
+ var server = http.createServer(function(req,res) {
+    res.write('Hello');
+    res.end('it is over')
+ })
+
+ server.listen(8000);
+
+ // import data from "./nodejs/server.js";
+
+ //console.log(data);

@@ -16,7 +16,8 @@
   },
   "name": "nodejs",
   "version": "1.0.0",
-  "main": "nodejs.js",
+  "main": "node.js",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrguven/nodejs.git"
@@ -27,5 +28,6 @@
     "url": "https://github.com/mrguven/nodejs/issues"
   },
   "homepage": "https://github.com/mrguven/nodejs#readme",
-  "description": "^C"
+  "description": "^C",
+  "keywords": []
 }
