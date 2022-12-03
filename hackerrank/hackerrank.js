@@ -24,14 +24,11 @@ var c =[0,0];
 return c;
 }
 
-
-
-
-
-
 console.log(compareTriplets(a,b));
 
 
+
+----------------------
 
 
 function hourglassSum(arr) {
@@ -67,31 +64,141 @@ return max;
 
 
 
+---------------------
+
+function hourglassSum(arr) {
+    // Write your code here
+
+let max=-5000;
+
+for(let rowIndex = 0;rowIndex<arr.length-2;rowIndex++) {
+    
+     for(let colIndex=0;colIndex<arr[rowIndex].length-2;colIndex++){
+        let tempMax = 0;
+    
+    for(let tempRowIndex = 0; tempRowIndex<3;tempRowIndex++){
+        for(let tempColIndex = 0; tempColIndex<3;tempColIndex++){
+        if(tempRowIndex!==1){
+            tempMax+=arr[rowIndex+tempRowIndex][colIndex+tempColIndex];
+        }
+        else if (tempColIndex ===1){
+             tempMax+=arr[rowIndex+tempRowIndex][colIndex+tempColIndex];
+        }
+    
+        
+    }
+    }
+    if (tempMax>max){
+        max=tempMax;
+    }
+}
+}
+return max;
+}
+
+
 */
 
-arr=[1,6,2,4,5,3];
-let sum1 = 0;
-let sum2 = 0;
-let maxSum = [];
-let minSum = [];
-let tempSum = 0;
-function miniMaxSum(arr) {
+
+
+
+
+
+//--------------
+
+
+
+
+
+function removeItemOnce(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    return arr;
+  }
+  console.log(removeItemOnce([2,5,9,1,5,8,5], 5))
+
+
+//---------------
+
+let arr1=[6,2,12,4,5,1];
+
+
+let sum3= 0 ;
+let maxSum=0;
+let minSum=0;
+let minArr=[];
+let maxArr = [];
+let i = 0;
+
+function miniMaxSum(arr1) {
     // Write your code here
-    
-    for (let i = 0; i< arr.length;i++) {
+
+    let sum2 = arr1[0];
+    let sum1 = arr1[0];
+    for(;i<arr1.length;i++) {
         
-      //  sum1 += arr[i];
-      
-}
-if (arr[i] >arr[i+1]) {
-    maxSum=arr[i];
-}
+        if(arr1[i]<sum2){
+            sum2=arr1[i];
+        }
+
+        if(arr1[i]>sum1){
+            sum1=arr1[i];
+        }
+
+        sum3+= arr1[i];
         
-       
-    
-return maxSum;
+
+       }
+
+
+   let maxSum=sum3-sum1;
+   let minSum=sum3-sum2;
+   maxArr=[maxSum,minSum]
+   return sum1;
+    }
+   
+   
+
+console.log(miniMaxSum(arr1))
+
+//----------------------------
+
+
+
+
+ let candles=[6,2,15,4,15,1];
+
+ function birthdayCakeCandles(candles) {
+    // Write your code here
+
+    let hightCandles = candles[0];
+    let countCandles=0;
+    for (let i = 0;i<candles.length;i++) {
+        if(hightCandles<candles[i]) {
+            hightCandles=candles[i];
+           
+        }
+        else if(hightCandles===candles[i]) {
+                 countCandles++;
+               
+             }
+        // if(hightCandles===candles[i]) {
+        //     countCandles++;
+           
+        // }
+     
+    }
+
+   return countCandles;
+
+
 }
 
+console.log(birthdayCakeCandles(candles))
 
 
-console.log(miniMaxSum(arr));
+
+
+//=--------------------------------------------
