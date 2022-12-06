@@ -202,3 +202,47 @@ console.log(birthdayCakeCandles(candles))
 
 
 //=--------------------------------------------
+
+
+
+
+let s = "hh:mm:ssPM";
+
+function timeConversion(s) {
+    // Write your code here
+   let controlAm= s.includes("AM")
+   let controlPm= s.includes("PM")
+   
+   let controlHours=parseInt(s);
+let SetPm= controlHours + 12;
+   
+if (controlPm===true && controlHours < 12) {
+    controlHours = SetPm;
+    s = "hh:mm:ss"}
+    else if (controlPm===true && controlHours === 12) {
+        controlHours=00;
+        s = "hh:mm:ss"}
+    else  if(controlAm=== true){
+        s = "hh:mm:ss"
+    }
+
+
+
+return s;
+}
+
+ 
+
+console.log(timeConversion(s));
+
+
+
+//-------------------------------------
+
+
+function timeConversion(s) {
+    // Write your code here
+
+    
+
+}
