@@ -1,3 +1,5 @@
+
+
 let a = [5, 6, 7,90,45,67,56];
 let b = [3, 6, 10,89,679,89,100];
 
@@ -204,44 +206,60 @@ console.log(birthdayCakeCandles(candles))
 
 
 
+let s = "18:00:00AM";
 
-let s = "hh:mm:ssPM";
 
-function timeConversion(s) {
-    // Write your code here
-   let controlAm= s.includes("AM")
-   let controlPm= s.includes("PM")
+function timeConvesion(s) {
+    // Write your crode here
+     let controlAm= s.includes("AM")
+     let controlPm= s.includes("PM")
+
+   let checkIndexFirstDoublePoint =s.indexOf(":");
+let checkHour = s.substr(0,checkIndexFirstDoublePoint);
+checkHour = parseInt(checkHour);
+let checkMin= s.substr(checkIndexFirstDoublePoint+1,checkIndexFirstDoublePoint+3)
+checkMin=parseInt(checkMin);
+let checkSecond = s.substr(checkIndexFirstDoublePoint+3,checkIndexFirstDoublePoint+5)
+checkSecond = parseInt(checkSecond)
+let SetPm= checkHour + 12;
    
-   let controlHours=parseInt(s);
-let SetPm= controlHours + 12;
-   
-if (controlPm===true && controlHours < 12) {
-    controlHours = SetPm;
-    s = "hh:mm:ss"}
-    else if (controlPm===true && controlHours === 12) {
-        controlHours=00;
-        s = "hh:mm:ss"}
-    else  if(controlAm=== true){
-        s = "hh:mm:ss"
-    }
-
-
-
-return s;
+ 
+if (controlPm==true && checkHour===12 ) {
+    checkHour=12;
+    
 }
+else if (controlPm==true && checkHour !== 12) {
+    checkHour=SetPm;
+   
+}
+else if (controlAm==true && checkHour===12) {
+    checkHour= 00;
+    
+    
+}
+checkHour=checkHour.toString()
+checkMin=checkMin.toString()
+checkSecond=checkSecond.toString()
 
+s = checkHour +":" + checkMin + ":" + checkSecond
+return s;
+
+
+
+}
+console.log(timeConvesion(s));
  
 
-console.log(timeConversion(s));
+
 
 
 
 //-------------------------------------
 
 
-function timeConversion(s) {
-    // Write your code here
+// function timeConversion(s) {
+//     // Write your code here
 
     
 
-}
+// }
