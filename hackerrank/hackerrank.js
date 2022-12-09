@@ -202,7 +202,7 @@ console.log(birthdayCakeCandles(candles))
 
 
 
-//=--------------------------------------------
+//=-------------------------------------------- failed
 
 
 
@@ -241,7 +241,7 @@ checkHour=checkHour.toString()
 checkMin=checkMin.toString()
 checkSecond=checkSecond.toString()
 
-s = checkHour +":" + checkMin + ":" + checkSecond
+s = checkHour +":" + checkMin + ":" + checkSecond;
 return s;
 
 
@@ -254,12 +254,19 @@ console.log(timeConvesion(s));
 
 
 
-//-------------------------------------
+//------------------------------------
 
 
-// function timeConversion(s) {
-//     // Write your code here
+1 <= n  <= 60;
 
-    
+0<= grades[i] <= 100;
 
-// }
+let remainderNull = grades[i] % 5;
+
+
+function remainderNull(grades) {
+    // Write your code here
+
+
+}
+
